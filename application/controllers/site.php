@@ -8,16 +8,22 @@ class Site extends CI_Controller {
 	}
 
 	public function home(){
+		$this -> load -> model("model_get");
+		$data['results'] = $this -> model_get -> getData("home");
+
 		$this -> load -> view("site_header");
 		$this -> load -> view("site_nav");
-		$this -> load -> view("content_home");
+		$this -> load -> view("content_home", $data);
 		$this -> load -> view("site_footer");
 	}
 
 	public function about(){
+		$this -> load -> model("model_get");
+		$data['results'] = $this -> model_get -> getData("about");
+
 		$this -> load -> view("site_header");
 		$this -> load -> view("site_nav");
-		$this -> load -> view("content_about");
+		$this -> load -> view("content_about", $data);
 		$this -> load -> view("site_footer");
 	}
 

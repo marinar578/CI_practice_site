@@ -1,5 +1,6 @@
 <div id="content">
-	<h1>Home Page</h1>
+	<?php echo heading("About Page", 1, "class=className");?>
+<!-- 	<h1>About Page</h1> -->
 	<p>Check out my awesome business</p>
 	<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
 	tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,

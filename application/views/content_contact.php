@@ -15,28 +15,28 @@
 	<?php 
 
 		$this -> load -> helper("form");
-		echo form_open("site/send_email"/*location for where this form will be sending*/);
+		echo form_open("site/send_email"); /*location for where this form will be sending*/
 
 			echo form_label("Name: ", "fullName");
 			$data = array(
-				"name" => "fullName";
-				"id" => "fullName";
+				"name" => "fullName",
+				"id" => "fullName",
 				"value" => ""
 			);
 			echo form_input($data);
 
 			echo form_label("Email: ", "email");
 			$data = array(
-				"name" => "email";
-				"id" => "email";
+				"name" => "email",
+				"id" => "email",
 				"value" => ""
 			);
 			echo form_input($data);
 
 			echo form_textarea("Message: ", "message");
 			$data = array(
-				"name" => "message";
-				"id" => "message";
+				"name" => "message",
+				"id" => "message",
 				"value" => ""
 			);
 			echo form_input($data);

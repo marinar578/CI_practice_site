@@ -12,7 +12,7 @@
 
 
 <div id="content">
-	<?php echo heading("Home Page", 1 /*header size*/, "class=className" /*optional attribute like class or id*/);?>
+	<!-- <?php // echo heading("Home Page", 1 /*header size*/, "class=className" /*optional attribute like class or id*/);?> -->
 	
 	<?php 
 		foreach($results as $row){

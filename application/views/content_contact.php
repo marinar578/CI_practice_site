@@ -18,6 +18,7 @@
 		echo form_open("site/send_email"); /*location for where this form will be sending*/
 
 			echo form_label("Name: ", "fullName");
+			// $data here is an array with attributes of the input:
 			$data = array(
 				"name" => "fullName",
 				"id" => "fullName",
@@ -41,7 +42,7 @@
 			);
 			echo form_input($data);
 
-			echo form_submit("contactSumit", "Send!");
+			echo form_submit("contactSubmit", "Send!");
 
 		echo form_close();
 

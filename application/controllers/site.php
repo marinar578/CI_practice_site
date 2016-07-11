@@ -40,9 +40,9 @@ class Site extends CI_Controller {
 		$this -> load -> library("form_validation");
 
 		// set_rules takes 3 params: name/id that's submitted of the text field, user-readable value that gets outputted when there are errors, conditions that need to be met
-		$this -> form_validation -> set_rules("fullName", "Full Name", "required");
-		$this -> form_validation -> set_rules("email", "Email Address", "required");
-		$this -> form_validation -> set_rules("message", "Message", "required");
+		$this -> form_validation -> set_rules("fullName", "Full Name", "required|alpha|xss_clean"); // alpha means that it must include capital or lowercase letters
+		$this -> form_validation -> set_rules("email", "Email Address", "required|valid_email|xss_clean");
+		$this -> form_validation -> set_rules("message", "Message", "required|xss_clean"); // xss_clean prevents anyone from doing cross site scripting in those input fiesl
 
 		if ($this -> form_validation -> run() == FALSE){
 			$this -> load -> view("site_header");

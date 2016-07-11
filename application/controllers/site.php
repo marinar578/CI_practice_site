@@ -51,6 +51,19 @@ class Site extends CI_Controller {
 			$this -> load -> view("site_footer");
 		} else {
 			$data["message"] = "The email has successfully been sent!";
+
+			$this -> load -> library("email");
+
+			$this->email->from(set_value("email"), set_value("fullName")); // two params: email and name of person getting emails
+			$this->email->to("la@la.la"); // param: email that it goes to
+			$this->email->subject("Message from out form");
+			$this->email->message(set_value("message"));
+
+			$this->email->send();
+
+			echo $this->email->print_debugger();
+
+
 			$this -> load -> view("site_header");
 			$this -> load -> view("site_nav");
 			$this -> load -> view("content_contact", $data);

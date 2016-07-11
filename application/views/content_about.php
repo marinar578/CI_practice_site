@@ -11,7 +11,7 @@
 
 
 <div id="content">
-	<?php echo heading("About Page", 1 /*header size*/, "class=className" /*optional attribute like class or id*/);?>
+	<!-- <?php // echo heading("About Page", 1 /*header size*/, "class=className" /*optional attribute like class or id*/);?> -->
 	
 	<?php 
 		foreach($results as $row){

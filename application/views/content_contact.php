@@ -22,28 +22,30 @@
 		// if you load the validation library in controller, you can use all the functions of the library in this view. This will display errors if the user tries to submit the form without entering the required fields
 		echo validation_errors();
 
-		echo form_open("site/send_email"/*location for where this form will be sending*/);
+		echo form_open("site/send_email"); /*location for where this form will be sending*/
+
 
 			echo form_label("Name: ", "fullName");
+			// $data here is an array with attributes of the input:
 			$data = array(
-				"name" => "fullName";
-				"id" => "fullName";
+				"name" => "fullName",
+				"id" => "fullName",
 				"value" => ""
 			);
 			echo form_input($data);
 
 			echo form_label("Email: ", "email");
 			$data = array(
-				"name" => "email";
-				"id" => "email";
+				"name" => "email",
+				"id" => "email",
 				"value" => ""
 			);
 			echo form_input($data);
 
 			echo form_textarea("Message: ", "message");
 			$data = array(
-				"name" => "message";
-				"id" => "message";
+				"name" => "message",
+				"id" => "message",
 				"value" => ""
 			);
 			echo form_input($data);

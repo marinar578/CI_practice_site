@@ -15,6 +15,13 @@
 	<?php 
 
 		$this -> load -> helper("form");
+
+		// the $message var comes from $data from the else part of the if/else statement in the send_email function:
+		echo $message;
+
+		// if you load the validation library in controller, you can use all the functions of the library in this view. This will display errors if the user tries to submit the form without entering the required fields
+		echo validation_errors();
+
 		echo form_open("site/send_email"/*location for where this form will be sending*/);
 
 			echo form_label("Name: ", "fullName");
@@ -41,7 +48,7 @@
 			);
 			echo form_input($data);
 
-			echo form_submit("contactSumit", "Send!");
+			echo form_submit("contactSubmit", "Send!");
 
 		echo form_close();
 
